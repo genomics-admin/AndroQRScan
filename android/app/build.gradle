@@ -1,0 +1,24 @@
+//apply plugin: 'com.android.library'
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 7
+    buildToolsVersion "21.0.2"
+
+    defaultConfig {
+        applicationId "com.google.zxing.client.android"
+        minSdkVersion 7
+        targetSdkVersion 7
+    }
+
+    buildTypes {
+        release {
+            runProguard true
+            proguardFiles 'proguard.cfg'
+        }
+    }
+}
+
+dependencies {
+    compile files('libs/core.jar')
+}
